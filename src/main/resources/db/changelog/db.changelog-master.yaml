@@ -1,0 +1,7 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/db.create.table.phone_booking_ticket.yaml
+      context: production
+  - include:
+      file: db/changelog/db.insert.data.yaml
+      context: production

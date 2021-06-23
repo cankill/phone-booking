@@ -1,0 +1,20 @@
+CREATE SCHEMA IF NOT EXISTS phone_booking AUTHORIZATION postgres;
+--CREATE TABLE IF NOT EXISTS phone_booking_ticket (
+--    id TEXT PRIMARY KEY,
+--    name TEXT NOT NULL,
+--    status TEXT NOT NULL,
+--    booked_by TEXT,
+--    last_book_time timestamp with time zone
+--);
+--
+--INSERT INTO phone_booking_ticket (id, name, status, booked_by, last_book_time)
+--VALUES ('2915a2d0-d446-11eb-b8bc-0242ac130003', 'Samsung Galaxy S9', 'AVAILABLE', null, null),
+--       ('2915a2d0-d446-11eb-b8bc-0242ac130004', 'Samsung Galaxy S8', 'AVAILABLE', null, null),
+--       ('2915a2d0-d446-11eb-b8bc-0242ac130005', 'Samsung Galaxy S7', 'AVAILABLE', null, null),
+--       ('2915a2d0-d446-11eb-b8bc-0242ac130006', 'Motorola Nexus 6', 'AVAILABLE', null, null),
+--       ('2915a2d0-d446-11eb-b8bc-0242ac130007', 'LG Nexus 5X', 'AVAILABLE', null, null),
+--       ('2915a2d0-d446-11eb-b8bc-0242ac130008', 'Huawei Honor 7X', 'AVAILABLE', null, null),
+--       ('2915a2d0-d446-11eb-b8bc-0242ac130009', 'Apple iPhone X', 'AVAILABLE', null, null),
+--       ('2915a2d0-d446-11eb-b8bc-0242ac13000a', 'Apple iPhone 8', 'AVAILABLE', null, null),
+--       ('2915a2d0-d446-11eb-b8bc-0242ac13000b', 'Apple iPhone 4s', 'AVAILABLE', null, null),
+--       ('2915a2d0-d446-11eb-b8bc-0242ac13000c', 'Nokia 3310', 'AVAILABLE', null, null);

@@ -1,0 +1,34 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-table-phone_booking_ticket
+      author: filyaniny@gmail.com
+      preConditions:
+        - onFail: HALT
+          not:
+            tableExists:
+              tableName: phone_booking_ticket
+      changes:
+        - createTable:
+            tableName: phone_booking_ticket
+            columns:
+              - column:
+                  name: id
+                  type: integer
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: name
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: status
+                  type: varchar(20)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: booked_by
+                  type: varchar(255)
+              - column:
+                  name: last_book_time
+                  type: timestamp with timezone

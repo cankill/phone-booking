@@ -1,0 +1,23 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-data-into-phone_booking_ticket
+      author: filyaniny@gmail.com
+      preConditions:
+        - onFail: HALT
+          tableExists:
+            tableName: phone_booking_ticket
+      changes:
+        - sql:
+            comment: Inserting initial data
+            sql: >
+              INSERT INTO phone_booking_ticket (id, name, status, booked_by, last_book_time)
+              VALUES (1, 'Samsung Galaxy S9', 'BOOKED', 'fan', now()),
+                     (2, 'Samsung Galaxy S8', 'BOOKED', 'fan', now()),
+                     (3, 'Samsung Galaxy S7', 'BOOKED', 'fan', now()),
+                     (4, 'Motorola Nexus 6', 'BOOKED', 'fan', now()),
+                     (5, 'LG Nexus 5X', 'BOOKED', 'fan', now()),
+                     (6, 'Huawei Honor 7X', 'BOOKED', 'fan', now()),
+                     (7, 'Apple iPhone X', 'BOOKED', 'fan', now()),
+                     (8, 'Apple iPhone 8', 'BOOKED', 'fan', now()),
+                     (9, 'Apple iPhone 4s', 'BOOKED', 'fan', now()),
+                     (10, 'Nokia 3310', 'AVAILABLE', null, now());

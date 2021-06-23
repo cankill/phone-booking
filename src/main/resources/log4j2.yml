@@ -1,0 +1,22 @@
+Configuration:
+  status: warn
+
+  appenders:
+    Console:
+      name: LogToConsole
+      PatternLayout:
+        disableAnsi: false
+        pattren: "%d{${LOG_DATEFORMAT_PATTERN:-yyyy-MM-dd HH:mm:ss.SSS}} %highlight{${LOG_LEVEL_PATTERN:-%5p}}{FATAL=red blink, ERROR=red, WARN=yellow bold, INFO=green, DEBUG=green bold, TRACE=blue} %style{${sys:PID}}{magenta} [%15.15t] %style{%-40.40C{1.}}{cyan} : %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}"
+
+      Loggers:
+        logger:
+          - name: org.fan.phonebooking
+            level: DEBUG
+            additivity: false
+            AppenderRef:
+              - ref: LogToConsole
+
+        Root:
+          level: DEBUG
+          AppenderRef:
+            ref: LogToConsole
